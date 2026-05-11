@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rodrigo Galdino — Empresário, Investidor & ex-CTO</title>
+  <meta name="description" content="Rodrigo Galdino — 25 anos na interseção entre tecnologia e negócios. Empresário, investidor e ex-CTO. Co-fundador da Leadble e RGS Holding." />
+  <meta name="author" content="Rodrigo Galdino" />
+  <meta property="og:title" content="Rodrigo Galdino — Empresário, Investidor & ex-CTO" />
+  <meta property="og:description" content="25 anos em tecnologia e serviços financeiros. Co-fundador da Leadble e RGS Holding." />
+  <meta property="og:url" content="https://rodrigogaldino.com.br" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F6F4EF;
+      --bg-card: #FFFFFF;
+      --text: #1A1917;
+      --text-muted: #7A7870;
+      --text-faint: #B0ADA6;
+      --rule: #D8D5CE;
+      --rule-light: #EAE7E1;
+      --accent: #1A1917;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* NAV */
+    nav {
+      padding: 28px 0;
+      border-bottom: 0.5px solid var(--rule);
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      padding: 80px 0 72px;
+      border-bottom: 0.5px solid var(--rule);
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 48px;
+      align-items: end;
+    }
+    .hero-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 20px;
+    }
+    .hero-name {
+      font-family: var(--serif);
+      font-size: 64px;
+      font-weight: 300;
+      line-height: 0.95;
+      color: var(--text);
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+    .hero-rule {
+      width: 40px;
+      height: 1px;
+      background: var(--text-faint);
+      margin-bottom: 20px;
+    }
+    .hero-tagline {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.9;
+      letter-spacing: 0.02em;
+    }
+    .hero-photo {
+      width: 220px;
+      height: 270px;
+      background: var(--rule-light);
+      border: 0.5px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--text-faint);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .hero-photo svg { opacity: 0.4; }
+
+    /* METRICS */
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 0.5px solid var(--rule);
+    }
+    .metric {
+      padding: 36px 0;
+      text-align: center;
+      border-right: 0.5px solid var(--rule);
+    }
+    .metric:last-child { border-right: none; }
+    .metric-value {
+      font-family: var(--serif);
+      font-size: 40px;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .metric-label {
+      font-size: 10px;
+      color: var(--text-faint);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 60px 0;
+      border-bottom: 0.5px solid var(--rule);
+    }
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 32px;
+    }
+
+    /* SOBRE */
+    .bio-text {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--text);
+      max-width: 620px;
+    }
+    .bio-text em {
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* TRAJETÓRIA */
+    .traj-intro {
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--text);
+      max-width: 580px;
+      margin-bottom: 40px;
+    }
+    .traj-intro strong { font-weight: 400; }
+    .traj-list { list-style: none; }
+    .traj-item {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 0.5px solid var(--rule-light);
+    }
+    .traj-item:last-child { border-bottom: none; }
+    .traj-period {
+      font-size: 11px;
+      color: var(--text-faint);
+      letter-spacing: 0.03em;
+      padding-top: 3px;
+    }
+    .traj-company {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+    .traj-role {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
+    .traj-note {
+      font-size: 11px;
+      color: var(--text-faint);
+      font-style: italic;
+      margin-top: 5px;
+    }
+    .awards-box {
+      background: var(--bg);
+      border: 0.5px solid var(--rule);
+      padding: 14px 16px;
+      margin-top: 10px;
+    }
+    .awards-box-label {
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 8px;
+    }
+    .award-line {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .award-line::before { content: "— "; color: var(--rule); }
+
+    /* FORMAÇÃO */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .edu-item { border-left: 1px solid var(--rule); padding-left: 16px; }
+    .edu-inst {
+      font-family: var(--serif);
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .edu-course {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* LIVRO */
+    .book-card {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      background: var(--bg-card);
+      border: 0.5px solid var(--rule);
+      padding: 24px;
+      margin-top: 8px;
+    }
+    .book-cover {
+      width: 64px;
+      height: 88px;
+      background: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .book-cover span {
+      font-family: var(--serif);
+      font-size: 9px;
+      color: var(--bg);
+      text-align: center;
+      line-height: 1.4;
+      padding: 4px;
+    }
+    .book-info {}
+    .book-title {
+      font-family: var(--serif);
+      font-size: 17px;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .book-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* PRESENÇA PÚBLICA */
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+    }
+    .event-card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--rule);
+      padding: 18px;
+    }
+    .event-tag {
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 8px;
+    }
+    .event-name {
+      font-family: var(--serif);
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .event-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* VENTURES */
+    .ventures-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .venture-card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--rule);
+      padding: 22px;
+    }
+    .venture-tag {
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 10px;
+    }
+    .venture-name {
+      font-family: var(--serif);
+      font-size: 18px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .venture-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ADVISORY */
+    .advisory-lead {
+      font-family: var(--serif);
+      font-size: 19px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--text);
+      max-width: 560px;
+      margin-bottom: 36px;
+    }
+    .advisory-lead em { font-style: italic; color: var(--text-muted); }
+    .advisory-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+    }
+    .advisory-item { border-left: 1px solid var(--rule); padding-left: 16px; }
+    .advisory-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+    .advisory-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* CONTATO */
+    .contact-section { border-bottom: none; padding-bottom: 48px; }
+    .contact-headline {
+      font-family: var(--serif);
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .contact-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+    .contact-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .btn-primary {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--text);
+      padding: 12px 28px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn-primary:hover { opacity: 0.8; }
+    .btn-secondary {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border-bottom: 0.5px solid var(--rule);
+      padding-bottom: 2px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .btn-secondary:hover { color: var(--text); }
+
+    /* FOOTER */
+    footer {
+      padding: 28px 0;
+      border-top: 0.5px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-text {
+      font-size: 10px;
+      color: var(--text-faint);
+      letter-spacing: 0.04em;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      .container { padding: 0 20px; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-photo { display: none; }
+      .hero-name { font-size: 48px; }
+      .metrics { grid-template-columns: 1fr 1fr; }
+      .metric:nth-child(2) { border-right: none; }
+      .metric:nth-child(3) { border-top: 0.5px solid var(--rule); border-right: none; grid-column: span 2; }
+      .traj-item { grid-template-columns: 1fr; gap: 4px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">Rodrigo Galdino</a>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#trajetoria">Trajetória</a></li>
+          <li><a href="#ventures">Ventures</a></li>
+          <li><a href="#advisory">Advisory</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero" id="topo">
+      <div class="hero-inner">
+        <div>
+          <p class="hero-eyebrow">São Paulo, Brasil</p>
+          <h1 class="hero-name">Rodrigo<br>Galdino</h1>
+          <div class="hero-rule"></div>
+          <p class="hero-tagline">
+            Empresário · Investidor · ex-CTO<br>
+            25 anos em tecnologia e serviços financeiros<br>
+            Cambridge · Kellogg · FEI
+          </p>
+        </div>
+        <div class="hero-photo" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span>Foto<br>profissional</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- METRICS -->
+    <div class="metrics">
+      <div class="metric">
+        <div class="metric-value">25</div>
+        <div class="metric-label">Anos de experiência</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">R$10bi+</div>
+        <div class="metric-label">Volume gerenciado</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">3</div>
+        <div class="metric-label">Ventures ativos</div>
+      </div>
+    </div>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <p class="section-label">Sobre</p>
+      <p class="bio-text">
+        De desenvolvedor de software a integrante do núcleo estratégico
+        que transformou uma empresa de 100 anos em uma das maiores
+        plataformas digitais financeiras da América Latina.
+        <em>Hoje uso tudo que aprendi do outro lado da mesa —
+        construindo e investindo em ventures onde tecnologia é
+        vantagem competitiva real.</em>
+      </p>
+    </section>
+
+    <!-- TRAJETÓRIA -->
+    <section id="trajetoria">
+      <p class="section-label">Trajetória</p>
+      <p class="traj-intro">
+        Comecei na linha de código e aprendi que as decisões mais importantes
+        nunca são técnicas — são estratégicas. Fui um dos integrantes do núcleo
+        duro que construiu a estratégia de transformação digital do Itaú:
+        <strong>como se transforma uma empresa de 100 anos em uma plataforma digital</strong>
+        sem perder escala, regulação e cultura. Essa visão moldou tudo que
+        faço hoje como empreendedor e investidor.
+      </p>
+      <ul class="traj-list">
+        <li class="traj-item">
+          <span class="traj-period">2018 — 2026</span>
+          <div>
+            <div class="traj-company">Banco Itaú</div>
+            <div class="traj-role">CTO — Membro do núcleo estratégico de transformação digital (Control Tower)</div>
+            <div class="traj-note">Responsável pelas Comunidades de Atendimento, Agências, Modern Workplace e Franquias. Co-arquiteto da estratégia que transformou uma empresa centenária em plataforma digital. Speaker em FEBRABAN TECH 2024, Conarec 2024, ServiceNow Summit, Huawei Intelligent Finance Summit Ásia 2022 e Cúpula Internacional de Bancos Shanghai 2023. Líder da Operação de Guerra Covid 19 — vencedora do Prêmio Walther Moreira Salles 2021.</div>
+            <div class="awards-box">
+              <div class="awards-box-label">Premiações</div>
+              <div class="award-line">Vencedor Prêmio Walther Moreira Salles 2021 — Categoria Risco</div>
+              <div class="award-line">Finalista Prêmio Walther Moreira Salles 2022 — Eficiência</div>
+              <div class="award-line">Vencedor Prêmio Kaizen Itaú Unibanco 2020 — Eficiência</div>
+              <div class="award-line">Vencedor Prêmio Kaizen Itaú Unibanco 2019 — Rentabilidade</div>
+            </div>
+          </div>
+        </li>
+        <li class="traj-item">
+          <span class="traj-period">Nov 2017 — Mar 2018</span>
+          <div>
+            <div class="traj-company">Athié Wohnrath</div>
+            <div class="traj-role">CIO — Diretor de Tecnologia</div>
+            <div class="traj-note">Transformação digital e migração 100% cloud — AWS + Azure</div>
+          </div>
+        </li>
+        <li class="traj-item">
+          <span class="traj-period">2015 — 2017</span>
+          <div>
+            <div class="traj-company">Digio</div>
+            <div class="traj-role">CIO — Fintech do grupo Elopar (Cielo, Elo, Alelo)</div>
+            <div class="traj-note">Scaling de clientes e plataformas digitais mobile-first</div>
+          </div>
+        </li>
+        <li class="traj-item">
+          <span class="traj-period">2013 — 2015</span>
+          <div>
+            <div class="traj-company">Alelo Brasil</div>
+            <div class="traj-role">Gerente de Tecnologia</div>
+            <div class="traj-note">Estruturação tech para dobrar faturamento em 3 anos</div>
+          </div>
+        </li>
+        <li class="traj-item">
+          <span class="traj-period">2008 — 2013</span>
+          <div>
+            <div class="traj-company">Bradesco Cartões · IBI</div>
+            <div class="traj-role">Gerente de Tecnologia</div>
+            <div class="traj-note">Incorporação Banco IBI, Amex e Bradescard México</div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- FORMAÇÃO -->
+      <p class="section-label" style="margin-top: 48px;">Formação</p>
+      <div class="edu-grid">
+        <div class="edu-item">
+          <div class="edu-inst">Kellogg</div>
+          <div class="edu-course">Executive Education<br>Northwestern University · 2017</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-inst">Cambridge</div>
+          <div class="edu-course">Post MBA — Innovation & Entrepreneurship<br>Judge Business School · 2012–2013</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-inst">Fundação Dom Cabral</div>
+          <div class="edu-course">MBA em Negócios · 2011–2012</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-inst">FEI</div>
+          <div class="edu-course">Engenharia de Produção · 2005–2010</div>
+        </div>
+      </div>
+
+      <!-- LIVRO -->
+      <p class="section-label" style="margin-top: 48px;">Publicação</p>
+      <div class="book-card">
+        <div class="book-cover">
+          <span>Por Trás<br>da TI</span>
+        </div>
+        <div class="book-info">
+          <div class="book-title">Por Trás da TI — 3ª Edição</div>
+          <p class="book-desc">
+            Co-autor com CIOs e CTOs de várias partes do mundo. Histórias de
+            liderança e transformação tecnológica para inspirar pessoas a impactar
+            a sociedade. Toda a renda é doada para instituições de caridade.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESENÇA PÚBLICA -->
+    <section id="presenca">
+      <p class="section-label">Presença pública</p>
+      <div class="events-grid">
+        <div class="event-card">
+          <div class="event-tag">2023 · Shanghai, China</div>
+          <div class="event-name">Cúpula Internacional de Bancos</div>
+          <p class="event-desc">Palestra sobre IA Generativa, transformação digital e cultura entre os maiores bancos do mundo. Representando o Itaú como referência mundial.</p>
+        </div>
+        <div class="event-card">
+          <div class="event-tag">2022 · Ásia</div>
+          <div class="event-name">Huawei Intelligent Finance Summit</div>
+          <p class="event-desc">Evento que reúne os maiores bancos do mundo na Ásia. Palestra sobre jornada de tecnologia, cultura e impacto social.</p>
+        </div>
+        <div class="event-card">
+          <div class="event-tag">2026 · Austin, Texas</div>
+          <div class="event-name">SXSW</div>
+          <p class="event-desc">South by Southwest — maior evento de inovação do mundo. Grupo de empresários brasileiros líderes.</p>
+        </div>
+        <div class="event-card">
+          <div class="event-tag">2024 · São Paulo</div>
+          <div class="event-name">FEBRABAN TECH</div>
+          <p class="event-desc">Palestra sobre IA Generativa, M365 Copilot e transformação digital no setor financeiro.</p>
+        </div>
+        <div class="event-card">
+          <div class="event-tag">2024 · São Paulo</div>
+          <div class="event-name">Conarec & ServiceNow Summit</div>
+          <p class="event-desc">Apresentação da jornada de CX e atendimento do Itaú em dois dos maiores eventos de tecnologia do Brasil.</p>
+        </div>
+        <div class="event-card">
+          <div class="event-tag">Silicon Valley · EUA</div>
+          <div class="event-name">Stanford · Kellogg · Plug and Play</div>
+          <p class="event-desc">Imersões em inovação e estratégia. Encontro com Reid Hoffman (cofundador do LinkedIn) e Chris Yeh no Plug and Play, onde nasceram Google e PayPal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENTURES -->
+    <section id="ventures">
+      <p class="section-label">Ventures</p>
+      <div class="ventures-grid">
+        <div class="venture-card">
+          <div class="venture-tag">Holding · 2024</div>
+          <div class="venture-name">RGS Holding</div>
+          <p class="venture-desc">Participações em negócios, equity e ventures tecnológicos com visão de longo prazo.</p>
+        </div>
+        <div class="venture-card">
+          <div class="venture-tag">SaaS · 2026</div>
+          <div class="venture-name">Leadble</div>
+          <p class="venture-desc">Plataforma de inteligência baseada no método Marketing de Interesse, co-fundada com João Kepler. Separa os papéis de leads, parceiros, afiliados e operadores com precisão.</p>
+        </div>
+        <div class="venture-card">
+          <div class="venture-tag">Conselho · 2026</div>
+          <div class="venture-name">SME | The New Economy</div>
+          <p class="venture-desc">JK Board Member — estratégia e tecnologia para o maior ecossistema de negócios da nova economia da América Latina.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADVISORY -->
+    <section id="advisory">
+      <p class="section-label">Advisory</p>
+      <p class="advisory-lead">
+        Trabalho com CEOs e founders que precisam de um advisor que entende
+        <em>os dois lados da mesa</em> — o técnico e o estratégico.
+        Não como executor, mas como parceiro de decisão.
+      </p>
+      <div class="advisory-grid">
+        <div class="advisory-item">
+          <div class="advisory-title">Estratégia de tecnologia</div>
+          <p class="advisory-desc">Stack, arquitetura e decisões de time alinhadas ao momento do negócio.</p>
+        </div>
+        <div class="advisory-item">
+          <div class="advisory-title">Avaliação de times técnicos</div>
+          <p class="advisory-desc">Capacidade de entrega, estimativas realistas e maturidade de produto.</p>
+        </div>
+        <div class="advisory-item">
+          <div class="advisory-title">Fintech & pagamentos</div>
+          <p class="advisory-desc">25 anos em regulação, infraestrutura e modelos de negócio em serviços financeiros.</p>
+        </div>
+        <div class="advisory-item">
+          <div class="advisory-title">Transformação digital</div>
+          <p class="advisory-desc">Da estratégia à execução — cloud, agilidade e cultura de produto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contact-section">
+      <p class="section-label">Contato</p>
+      <h2 class="contact-headline">Vamos conversar<br>sobre o seu negócio.</h2>
+      <p class="contact-sub">
+        Disponível para advisory, board e oportunidades de investimento.<br>
+        São Paulo, Brasil.
+      </p>
+      <div class="contact-actions">
+        <a href="mailto:contato@rodrigogaldino.com.br" class="btn-primary">Enviar mensagem</a>
+        <a href="https://linkedin.com/in/rodrigo-galdino-20954516" target="_blank" rel="noopener" class="btn-secondary">LinkedIn</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; width:100%;">
+      <span class="footer-text">© 2026 Rodrigo Galdino</span>
+      <span class="footer-text">rodrigogaldino.com.br</span>
+    </div>
+  </footer>
+
+</body>
+</html>
