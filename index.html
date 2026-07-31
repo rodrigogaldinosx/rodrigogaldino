@@ -1,756 +1,524 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rodrigo Galdino — Empresário, Investidor & ex-CTO</title>
-  <meta name="description" content="Rodrigo Galdino — 25 anos na interseção entre tecnologia e negócios. Empresário, investidor e ex-CTO. Co-fundador da Leadble e RGS Holding." />
-  <meta name="author" content="Rodrigo Galdino" />
-  <meta property="og:title" content="Rodrigo Galdino — Empresário, Investidor & ex-CTO" />
-  <meta property="og:description" content="25 anos em tecnologia e serviços financeiros. Co-fundador da Leadble e RGS Holding." />
-  <meta property="og:url" content="https://rodrigogaldino.com.br" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rodrigo Galdino — Empresário e Investidor</title>
+<meta name="author" content="Rodrigo Galdino">
+<meta name="description" content="Mais de 11 anos como CTO em fintech e no Itaú Unibanco. Hoje sócio da Ópsia, da Leadble e da RGS.Capital, e que atua em startups e empresas em crescimento.">
+<meta name="keywords" content="Rodrigo Galdino, empresário, investidor, equity, smart money, crescimento, Ópsia, Leadble, RGS Capital, nova economia">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rodrigo Galdino — Empresário e Investidor">
+<meta property="og:description" content="28 anos aprendendo como as grandes empresas ganham. Hoje coloco isso dentro das que ainda estão crescendo.">
+<meta property="og:url" content="https://rodrigogaldino.com.br">
+<meta property="og:image" content="https://rodrigogaldino.com.br/img/hero-rodrigo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0E14">
+<link rel="canonical" href="https://rodrigogaldino.com.br">
 
-    :root {
-      --bg: #F6F4EF;
-      --bg-card: #FFFFFF;
-      --text: #1A1917;
-      --text-muted: #7A7870;
-      --text-faint: #B0ADA6;
-      --rule: #D8D5CE;
-      --rule-light: #EAE7E1;
-      --accent: #1A1917;
-      --serif: 'Cormorant Garamond', Georgia, serif;
-      --sans: 'DM Sans', sans-serif;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    html { scroll-behavior: smooth; }
+<style>
+:root{
+  --ink:#0B0E14; --ink-2:#12171F; --line:#252D3A;
+  --paper:#EDEAE3; --gold:#C39A4E; --gold-lit:#DDB56A;
+  --dim:#8B94A3; --dim-paper:#5E5D55;
+  --display:"Fraunces",Georgia,serif;
+  --body:"Archivo",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+  --pad:clamp(20px,5vw,64px); --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--ink);color:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit} img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      font-size: 15px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
+.band{padding:clamp(64px,9vw,132px) var(--pad)}
+.band--paper{background:var(--paper);color:var(--ink)}
+.band--ink2{background:var(--ink-2)}
+.wrap{max-width:var(--max);margin:0 auto;width:100%}
 
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.eyebrow::after{content:"";flex:1;height:1px;background:currentColor;opacity:.3}
+h2.sec{font-family:var(--display);font-weight:400;font-size:clamp(30px,4.6vw,54px);line-height:1.08;letter-spacing:-.025em;max-width:20ch;margin-bottom:22px}
+.lede{font-size:clamp(16px,1.5vw,19px);max-width:62ch;color:var(--dim)}
+.band--paper .lede{color:var(--dim-paper)}
 
-    /* NAV */
-    nav {
-      padding: 28px 0;
-      border-bottom: 0.5px solid var(--rule);
-    }
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nav-logo {
-      font-family: var(--serif);
-      font-size: 16px;
-      font-weight: 400;
-      color: var(--text);
-      text-decoration: none;
-      letter-spacing: 0.01em;
-    }
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 11px;
-      color: var(--text-muted);
-      text-decoration: none;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--text); }
+.btn{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:17px 28px;border:1px solid transparent;display:inline-block;cursor:pointer;transition:transform .18s,background .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn--solid{background:var(--gold);color:#0B0E14;font-weight:500}
+.btn--solid:hover{background:var(--gold-lit)}
+.btn--ghost{border-color:rgba(237,234,227,.32);color:var(--paper)}
+.btn--ghost:hover{border-color:var(--paper)}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
 
-    /* HERO */
-    .hero {
-      padding: 80px 0 72px;
-      border-bottom: 0.5px solid var(--rule);
-    }
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1fr 220px;
-      gap: 48px;
-      align-items: end;
-    }
-    .hero-eyebrow {
-      font-size: 10px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 20px;
-    }
-    .hero-name {
-      font-family: var(--serif);
-      font-size: 64px;
-      font-weight: 300;
-      line-height: 0.95;
-      color: var(--text);
-      margin-bottom: 24px;
-      letter-spacing: -0.01em;
-    }
-    .hero-rule {
-      width: 40px;
-      height: 1px;
-      background: var(--text-faint);
-      margin-bottom: 20px;
-    }
-    .hero-tagline {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.9;
-      letter-spacing: 0.02em;
-    }
-    .hero-photo {
-      width: 220px;
-      height: 270px;
-      background: var(--rule-light);
-      border: 0.5px solid var(--rule);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      color: var(--text-faint);
-      font-size: 11px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      text-align: center;
-    }
-    .hero-photo svg { opacity: 0.4; }
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px var(--pad);transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.is-stuck{background:rgba(11,14,20,.9);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+.nav__brand{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-decoration:none}
+.nav__brand b{color:var(--gold);font-weight:500}
+.nav__links{display:flex;gap:28px;list-style:none}
+.nav__links a{font-size:13px;text-decoration:none;color:var(--dim);transition:color .2s}
+.nav__links a:hover{color:var(--paper)}
+.nav__cta{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:11px 20px;border:1px solid var(--gold);color:var(--gold);white-space:nowrap;transition:background .2s,color .2s}
+.nav__cta:hover{background:var(--gold);color:var(--ink)}
+@media(max-width:900px){.nav__links{display:none}}
 
-    /* METRICS */
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-bottom: 0.5px solid var(--rule);
-    }
-    .metric {
-      padding: 36px 0;
-      text-align: center;
-      border-right: 0.5px solid var(--rule);
-    }
-    .metric:last-child { border-right: none; }
-    .metric-value {
-      font-family: var(--serif);
-      font-size: 40px;
-      font-weight: 300;
-      color: var(--text);
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .metric-label {
-      font-size: 10px;
-      color: var(--text-faint);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:120px var(--pad) clamp(32px,5vw,64px);overflow:hidden}
+.hero__bg{position:absolute;inset:0;z-index:0;background:#0B0E14 url('img/hero-rodrigo.jpg') center 30%/cover no-repeat}
+.hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,14,20,.76) 0%,rgba(11,14,20,.46) 36%,rgba(11,14,20,.95) 88%)}
+.hero__inner{position:relative;z-index:1;max-width:var(--max);margin:0 auto;width:100%}
+.hero__stamp{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+.hero__name{font-family:var(--display);font-weight:400;font-size:clamp(52px,12.5vw,168px);line-height:.86;letter-spacing:-.045em;text-transform:uppercase}
+.hero__name span{display:block}
+.hero__line{margin-top:clamp(24px,3.5vw,40px);padding-top:26px;border-top:1px solid rgba(237,234,227,.18);display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(20px,4vw,56px);align-items:end}
+.hero__claim{font-family:var(--display);font-size:clamp(20px,2.5vw,31px);line-height:1.22;letter-spacing:-.022em;max-width:24ch}
+.hero__claim b{color:var(--gold);font-weight:400;font-style:italic}
+.hero__sub{font-size:15.5px;color:#B6BCC7;max-width:44ch;margin-bottom:20px}
+@media(max-width:820px){.hero__line{grid-template-columns:1fr}}
+.scrollcue{position:absolute;bottom:18px;right:var(--pad);z-index:1;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--dim);writing-mode:vertical-rl;text-transform:uppercase}
 
-    /* SECTIONS */
-    section {
-      padding: 60px 0;
-      border-bottom: 0.5px solid var(--rule);
-    }
-    .section-label {
-      font-size: 10px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 32px;
-    }
+/* marquee */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;overflow:hidden;background:var(--ink)}
+.marquee__track{display:flex;width:max-content;animation:slide 40s linear infinite}
+.marquee:hover .marquee__track{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+.marquee__set{display:flex;align-items:center;gap:56px;padding-right:56px}
+.marquee__set span{font-family:var(--mono);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:#7C8593;white-space:nowrap}
+.marquee__set span::before{content:"◦ ";color:var(--gold)}
 
-    /* SOBRE */
-    .bio-text {
-      font-family: var(--serif);
-      font-size: 22px;
-      font-weight: 300;
-      line-height: 1.75;
-      color: var(--text);
-      max-width: 620px;
-    }
-    .bio-text em {
-      font-style: italic;
-      color: var(--text-muted);
-    }
+/* quem é */
+.who{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,72px);align-items:center}
+.who__photo{aspect-ratio:4/3;object-fit:cover;width:100%;border:1px solid var(--line)}
+.who__text p{font-size:17px;line-height:1.72;margin-bottom:18px}
+.who__text p:last-of-type{margin-bottom:0}
+.who__text .big{font-family:var(--display);font-size:clamp(22px,2.6vw,31px);line-height:1.28;letter-spacing:-.02em;margin-bottom:24px}
+@media(max-width:820px){.who{grid-template-columns:1fr}}
 
-    /* TRAJETÓRIA */
-    .traj-intro {
-      font-family: var(--serif);
-      font-size: 17px;
-      font-weight: 300;
-      line-height: 1.85;
-      color: var(--text);
-      max-width: 580px;
-      margin-bottom: 40px;
-    }
-    .traj-intro strong { font-weight: 400; }
-    .traj-list { list-style: none; }
-    .traj-item {
-      display: grid;
-      grid-template-columns: 130px 1fr;
-      gap: 20px;
-      padding: 18px 0;
-      border-bottom: 0.5px solid var(--rule-light);
-    }
-    .traj-item:last-child { border-bottom: none; }
-    .traj-period {
-      font-size: 11px;
-      color: var(--text-faint);
-      letter-spacing: 0.03em;
-      padding-top: 3px;
-    }
-    .traj-company {
-      font-family: var(--serif);
-      font-size: 16px;
-      font-weight: 400;
-      color: var(--text);
-      margin-bottom: 3px;
-    }
-    .traj-role {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-bottom: 0;
-    }
-    .traj-note {
-      font-size: 11px;
-      color: var(--text-faint);
-      font-style: italic;
-      margin-top: 5px;
-    }
-    .awards-box {
-      background: var(--bg);
-      border: 0.5px solid var(--rule);
-      padding: 14px 16px;
-      margin-top: 10px;
-    }
-    .awards-box-label {
-      font-size: 9px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 8px;
-    }
-    .award-line {
-      font-size: 11px;
-      color: var(--text-muted);
-      line-height: 1.8;
-    }
-    .award-line::before { content: "— "; color: var(--rule); }
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:clamp(48px,6vw,72px)}
+.num{background:var(--ink);padding:32px 26px}
+.num b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(32px,4.4vw,50px);line-height:1;letter-spacing:-.035em;color:var(--gold)}
+.num span{display:block;margin-top:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);line-height:1.7}
 
-    /* FORMAÇÃO */
-    .edu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
-    .edu-item { border-left: 1px solid var(--rule); padding-left: 16px; }
-    .edu-inst {
-      font-family: var(--serif);
-      font-size: 15px;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
-    .edu-course {
-      font-size: 11px;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
+/* empresas */
+.folio{margin-top:clamp(44px,5vw,64px);display:grid;gap:1px;background:rgba(11,14,20,.18);border:1px solid rgba(11,14,20,.18)}
+.co{background:var(--paper);display:grid;grid-template-columns:230px 1fr 190px;gap:clamp(18px,3vw,44px);padding:clamp(30px,3.8vw,50px)}
+.co__name{font-family:var(--display);font-size:clamp(28px,3.2vw,40px);font-weight:400;letter-spacing:-.028em;line-height:1.02}
+.co__role{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-top:14px}
+.co__desc p{font-size:16.5px;color:var(--dim-paper);max-width:52ch}
+.co__desc p + p{margin-top:13px}
+.co__facts{font-family:var(--mono);font-size:11px;line-height:2;color:var(--dim-paper);letter-spacing:.04em}
+.co__facts b{display:block;color:var(--ink);text-transform:uppercase;letter-spacing:.15em;font-size:10px;font-weight:500;margin-bottom:6px}
+.co__facts b + b{margin-top:16px}
+@media(max-width:920px){.co{grid-template-columns:1fr;gap:20px}}
 
-    /* LIVRO */
-    .book-card {
-      display: flex;
-      gap: 24px;
-      align-items: flex-start;
-      background: var(--bg-card);
-      border: 0.5px solid var(--rule);
-      padding: 24px;
-      margin-top: 8px;
-    }
-    .book-cover {
-      width: 64px;
-      height: 88px;
-      background: var(--text);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .book-cover span {
-      font-family: var(--serif);
-      font-size: 9px;
-      color: var(--bg);
-      text-align: center;
-      line-height: 1.4;
-      padding: 4px;
-    }
-    .book-info {}
-    .book-title {
-      font-family: var(--serif);
-      font-size: 17px;
-      color: var(--text);
-      margin-bottom: 6px;
-    }
-    .book-desc {
-      font-size: 12px;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
+/* alocação */
+.alloc{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:clamp(44px,5vw,64px)}
+.al{background:var(--ink);display:grid;grid-template-columns:250px 1fr;gap:clamp(18px,3vw,44px);padding:clamp(30px,3.6vw,46px)}
+.al h4{font-family:var(--display);font-size:clamp(22px,2.5vw,30px);font-weight:400;letter-spacing:-.02em;line-height:1.1}
+.al__tag{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:12px}
+.al p{font-size:16.5px;color:var(--dim);max-width:56ch}
+.al p + p{margin-top:12px}
+@media(max-width:760px){.al{grid-template-columns:1fr;gap:14px}}
+.alloc__note{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--dim);margin-top:26px}
 
-    /* PRESENÇA PÚBLICA */
-    .events-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 14px;
-    }
-    .event-card {
-      background: var(--bg-card);
-      border: 0.5px solid var(--rule);
-      padding: 18px;
-    }
-    .event-tag {
-      font-size: 9px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 8px;
-    }
-    .event-name {
-      font-family: var(--serif);
-      font-size: 15px;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
-    .event-desc {
-      font-size: 11px;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
+/* presença */
+.recog{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:clamp(14px,1.8vw,22px);margin-top:clamp(40px,5vw,56px)}
+.rec{display:flex;flex-direction:column}
+.rec__img{aspect-ratio:4/3;object-fit:cover;width:100%;border:1px solid var(--line)}
+.rec__cap{padding:16px 0 0}
+.rec__loc{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.rec h4{font-size:16.5px;font-weight:600;margin-bottom:6px;letter-spacing:-.01em}
+.rec p{font-size:14px;color:var(--dim)}
+.awards{margin-top:clamp(40px,5vw,58px);border-top:1px solid var(--line);padding-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:26px}
+.award{font-family:var(--mono);font-size:12px;line-height:1.85;color:var(--dim);letter-spacing:.03em}
+.award b{display:block;color:var(--gold);font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:10px;margin-bottom:8px}
 
-    /* VENTURES */
-    .ventures-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-    }
-    .venture-card {
-      background: var(--bg-card);
-      border: 0.5px solid var(--rule);
-      padding: 22px;
-    }
-    .venture-tag {
-      font-size: 9px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 10px;
-    }
-    .venture-name {
-      font-family: var(--serif);
-      font-size: 18px;
-      color: var(--text);
-      margin-bottom: 8px;
-    }
-    .venture-desc {
-      font-size: 12px;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
+/* contato */
+.talk{display:grid;grid-template-columns:1fr .9fr;gap:clamp(30px,5vw,72px);align-items:start;margin-top:clamp(36px,4vw,52px)}
+.talk__list{list-style:none;display:grid;gap:16px}
+.talk__list li{font-size:16.5px;color:var(--dim);display:flex;gap:14px;line-height:1.6}
+.talk__list li::before{content:"—";color:var(--gold)}
+.social{display:grid;gap:16px}
+.social a{display:flex;align-items:baseline;gap:14px;text-decoration:none;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--dim);transition:color .2s}
+.social a:hover{color:var(--gold)}
+.social a b{color:var(--gold);font-weight:500;letter-spacing:.16em;text-transform:uppercase;font-size:10px;min-width:82px}
+@media(max-width:820px){.talk{grid-template-columns:1fr}}
 
-    /* ADVISORY */
-    .advisory-lead {
-      font-family: var(--serif);
-      font-size: 19px;
-      font-weight: 300;
-      line-height: 1.8;
-      color: var(--text);
-      max-width: 560px;
-      margin-bottom: 36px;
-    }
-    .advisory-lead em { font-style: italic; color: var(--text-muted); }
-    .advisory-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 24px;
-    }
-    .advisory-item { border-left: 1px solid var(--rule); padding-left: 16px; }
-    .advisory-title {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text);
-      margin-bottom: 5px;
-    }
-    .advisory-desc {
-      font-size: 11px;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
+.foot{border-top:1px solid var(--line);padding:36px var(--pad);display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--dim)}
+.foot a{text-decoration:none;transition:color .2s}
+.foot a:hover{color:var(--gold)}
+.foot__links{display:flex;gap:22px;flex-wrap:wrap}
 
-    /* CONTATO */
-    .contact-section { border-bottom: none; padding-bottom: 48px; }
-    .contact-headline {
-      font-family: var(--serif);
-      font-size: 36px;
-      font-weight: 300;
-      line-height: 1.2;
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-    .contact-sub {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.8;
-      margin-bottom: 36px;
-    }
-    .contact-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
-    .btn-primary {
-      display: inline-block;
-      font-size: 11px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--bg);
-      background: var(--text);
-      padding: 12px 28px;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .btn-primary:hover { opacity: 0.8; }
-    .btn-secondary {
-      display: inline-block;
-      font-size: 11px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      border-bottom: 0.5px solid var(--rule);
-      padding-bottom: 2px;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .btn-secondary:hover { color: var(--text); }
-
-    /* FOOTER */
-    footer {
-      padding: 28px 0;
-      border-top: 0.5px solid var(--rule);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .footer-text {
-      font-size: 10px;
-      color: var(--text-faint);
-      letter-spacing: 0.04em;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 640px) {
-      .container { padding: 0 20px; }
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-photo { display: none; }
-      .hero-name { font-size: 48px; }
-      .metrics { grid-template-columns: 1fr 1fr; }
-      .metric:nth-child(2) { border-right: none; }
-      .metric:nth-child(3) { border-top: 0.5px solid var(--rule); border-right: none; grid-column: span 2; }
-      .traj-item { grid-template-columns: 1fr; gap: 4px; }
-      .nav-links { display: none; }
-    }
-  </style>
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+.reveal.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+</style>
 </head>
 <body>
 
-  <nav>
-    <div class="container">
-      <div class="nav-inner">
-        <a href="#" class="nav-logo">Rodrigo Galdino</a>
-        <ul class="nav-links">
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#trajetoria">Trajetória</a></li>
-          <li><a href="#ventures">Ventures</a></li>
-          <li><a href="#advisory">Advisory</a></li>
-          <li><a href="#contato">Contato</a></li>
+<nav class="nav" id="nav">
+  <a class="nav__brand" href="#topo">RODRIGO <b>GALDINO</b></a>
+  <ul class="nav__links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#empresas">Empresas</a></li>
+    <li><a href="#alocacao">Onde eu entro</a></li>
+    <li><a href="#presenca">Presença</a></li>
+  </ul>
+  <a class="nav__cta" href="#contato">Falar comigo</a>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<header class="hero" id="topo">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <p class="hero__stamp">Empresário · Investidor · Equity · Smart Money</p>
+    <h1 class="hero__name"><span>Rodrigo</span><span>Galdino</span></h1>
+    <div class="hero__line">
+      <p class="hero__claim">Passei 28 anos aprendendo como as grandes empresas ganham. <b>Hoje coloco isso dentro das que ainda estão crescendo.</b></p>
+      <div>
+        <p class="hero__sub">
+          Sócio da Ópsia, da Leadble e da RGS.Capital, ao lado de Marcus Coelho e João Kepler.
+          Mais de 11 anos como CTO em fintech e no Itaú Unibanco.
+        </p>
+        <div class="actions">
+          <a class="btn btn--solid" href="#empresas">Ver as empresas</a>
+          <a class="btn btn--ghost" href="#alocacao">Onde eu entro</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="scrollcue" aria-hidden="true">role</span>
+</header>
+
+<div class="marquee" aria-label="Áreas de atuação">
+  <div class="marquee__track">
+    <div class="marquee__set">
+      <span>Empresário</span><span>Investidor</span><span>Equity</span><span>Smart Money</span><span>Crescimento</span>
+      <span>Empresário</span><span>Investidor</span><span>Equity</span><span>Smart Money</span><span>Crescimento</span>
+    </div>
+    <div class="marquee__set" aria-hidden="true">
+      <span>Empresário</span><span>Investidor</span><span>Equity</span><span>Smart Money</span><span>Crescimento</span>
+      <span>Empresário</span><span>Investidor</span><span>Equity</span><span>Smart Money</span><span>Crescimento</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ QUEM É ══════════ -->
+<section class="band" id="sobre">
+  <div class="wrap reveal">
+    <p class="eyebrow">Quem é Rodrigo Galdino</p>
+    <div class="who">
+      <img class="who__photo" src="img/retrato.jpg" alt="Retrato de Rodrigo Galdino" loading="lazy" width="1200" height="908">
+      <div class="who__text">
+        <p class="big">Existe um jeito de crescer que as grandes empresas conhecem e as pequenas quase nunca acessam. Meu trabalho é encurtar essa distância.</p>
+        <p>
+          Foram mais de 11 anos como CTO, em fintech e no Itaú Unibanco: responder pela
+          tecnologia de uma operação que atende dezenas de milhões de pessoas e não pode parar
+          um segundo. São 28 anos no total, todos dentro das empresas que dominam o mercado de
+          meios de pagamento no Brasil.
+        </p>
+        <p>
+          Olhar para fora virou método. Fui ao Vale do Silício em 2019 como aprendiz e voltei
+          em 2025 como par, para discutir estratégia de produto com AWS, OpenAI, Microsoft,
+          Google e Salesforce. Fui à China entender como um banco nascido há onze anos chegou
+          a 444 milhões de clientes sem nunca ter tido uma agência.
+        </p>
+        <p>
+          Hoje construo três empresas e atuo em startups e empresas em crescimento. O que eu levo de mais
+          valioso não é a tecnologia — é saber onde uma empresa quebra antes que ela quebre.
+        </p>
+      </div>
+    </div>
+
+    <div class="nums">
+      <div class="num"><b>28</b><span>Anos de<br>tecnologia</span></div>
+      <div class="num"><b>11+</b><span>Anos como CTO<br>fintech e Itaú</span></div>
+      <div class="num"><b>3</b><span>Empresas<br>como sócio</span></div>
+      <div class="num"><b>15</b><span>Clientes<br>na Ópsia</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EMPRESAS ══════════ -->
+<section class="band band--paper" id="empresas">
+  <div class="wrap reveal">
+    <p class="eyebrow">Empresas que eu construo</p>
+    <h2 class="sec">Três empresas. Uma tese só.</h2>
+    <p class="lede">
+      Construir, distribuir e capitalizar. Cada uma resolve uma parte da mesma equação, e as
+      três nasceram do mesmo lugar: o que eu vi funcionar dentro das maiores e quase nunca
+      chega às menores.
+    </p>
+
+    <div class="folio">
+
+      <article class="co">
+        <div>
+          <div class="co__name">Ópsia</div>
+          <div class="co__role">Sócio · Estúdio de IA e produto</div>
+        </div>
+        <div class="co__desc">
+          <p>
+            Software proprietário construído com inteligência artificial em escala, sob
+            supervisão humana. Fundada para dar às pequenas e médias empresas do Brasil
+            acesso à tecnologia e à visão que as grandes usam para dominar seus mercados.
+          </p>
+          <p>
+            A tese está no nome — <em>ópsia</em>, do grego, o ato de ver. Antes da velocidade,
+            a clareza. No fim de um contrato com uma plataforma você não tem nada; no fim de
+            um ciclo de desenvolvimento próprio, você tem um ativo.
+          </p>
+          <p>
+            Empresa nova, com 15 clientes já em operação. Sócio ao lado de Marcus Coelho,
+            empreendedor serial, e João Kepler, um dos maiores investidores anjo do Brasil e
+            fundador da Bossa Invest.
+          </p>
+        </div>
+        <div class="co__facts">
+          <b>Clientes</b>15 em operação
+          <b>Sócios</b>Marcus Coelho<br>João Kepler
+          <b>Site</b><a href="https://opsiabrasil.com" target="_blank" rel="noopener">opsiabrasil.com</a>
+        </div>
+      </article>
+
+      <article class="co">
+        <div>
+          <div class="co__name">Leadble</div>
+          <div class="co__role">Co-fundador · Intelligence Platform</div>
+        </div>
+        <div class="co__desc">
+          <p>
+            Plataforma de inteligência que opera o método do Marketing de Interesse,
+            co-fundada com João Kepler. Separa os papéis de leads, parceiros, afiliados e
+            operadores com precisão e inteligência artificial.
+          </p>
+          <p>Lançada publicamente no SDA — Segredo da Audiência, São Paulo, 2026.</p>
+        </div>
+        <div class="co__facts">
+          <b>Desde</b>Março de 2026
+          <b>Site</b><a href="https://leadble.com.br" target="_blank" rel="noopener">leadble.com.br</a>
+        </div>
+      </article>
+
+      <article class="co">
+        <div>
+          <div class="co__name">RGS.Capital</div>
+          <div class="co__role">Co-fundador · Participações e equity</div>
+        </div>
+        <div class="co__desc">
+          <p>
+            Holding de participações via equity em startups e empresas em crescimento.
+            Estruturada com visão de longo prazo e planejamento sucessório — não com data de
+            saída marcada no calendário.
+          </p>
+          <p>É por aqui que avalio teses de sociedade e co-fundação.</p>
+        </div>
+        <div class="co__facts">
+          <b>Desde</b>Dezembro de 2024
+          <b>Foco</b>Equity em startups<br>e empresas em crescimento
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ALOCAÇÃO ══════════ -->
+<section class="band" id="alocacao">
+  <div class="wrap reveal">
+    <p class="eyebrow">Onde eu entro</p>
+    <h2 class="sec">Duas teses de fronteira. E uma onde eu entro junto.</h2>
+    <p class="lede">
+      Nas duas primeiras eu tenho exposição e paciência. Na terceira eu entro pela atuação —
+      e é onde eu passo a maior parte do meu tempo.
+    </p>
+
+    <div class="alloc">
+
+      <div class="al">
+        <div>
+          <h4>Startups e empresas em crescimento</h4>
+          <div class="al__tag">Smart money · equity por atuação</div>
+        </div>
+        <div>
+          <p>
+            A frente principal. Startups, pequenas e médias empresas brasileiras que já
+            provaram que têm mercado e agora precisam crescer sem quebrar no caminho.
+          </p>
+          <p>
+            Aqui eu não entro com cheque. Entro com 28 anos vendo por dentro o que faz uma
+            empresa escalar e outra travar — arquitetura, custo de servir, formação de time
+            técnico, decisão sob pressão — e participo via equity pelo que construo junto.
+            É a única frente em que eu consigo mudar o resultado, e não apenas acompanhá-lo.
+          </p>
+        </div>
+      </div>
+
+      <div class="al">
+        <div>
+          <h4>Fronteira de inteligência artificial</h4>
+          <div class="al__tag">Exposição</div>
+        </div>
+        <div>
+          <p>
+            Exposição às empresas que estão definindo a camada base da IA — as mesmas cuja
+            estratégia de produto eu fui discutir presencialmente no Vale do Silício, não ler
+            em relatório.
+          </p>
+        </div>
+      </div>
+
+      <div class="al">
+        <div>
+          <h4>Aeroespacial</h4>
+          <div class="al__tag">Exposição · horizonte longo</div>
+        </div>
+        <div>
+          <p>
+            O acesso ao espaço deixou de ser projeto de Estado e virou mercado com custo
+            unitário caindo. É a posição de horizonte mais longo do portfólio, e a que exige
+            mais paciência.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="alloc__note">Não comento posições individuais.</p>
+  </div>
+</section>
+
+<!-- ══════════ PRESENÇA ══════════ -->
+<section class="band band--ink2" id="presenca">
+  <div class="wrap reveal">
+    <p class="eyebrow">Presença</p>
+    <h2 class="sec">Dez anos ouvindo quem constrói a fronteira.</h2>
+    <p class="lede">Palcos, mesas e visitas com as empresas que definem para onde a tecnologia vai.</p>
+
+    <div class="recog">
+      <div class="rec">
+        <img class="rec__img" src="img/joao-kepler.jpg" alt="Rodrigo Galdino com João Kepler" loading="lazy">
+        <div class="rec__cap">
+          <div class="rec__loc">São Paulo</div>
+          <h4>Com João Kepler</h4>
+          <p>Meu sócio na Ópsia e na Leadble, e meu mentor. Um dos maiores investidores anjo do Brasil e fundador da Bossa Invest.</p>
+        </div>
+      </div>
+      <div class="rec">
+        <img class="rec__img" src="img/palco-xangai-palestra.jpg" alt="Xangai, 2023" loading="lazy">
+        <div class="rec__cap">
+          <div class="rec__loc">2023 · Xangai, China</div>
+          <h4>Apresentação aos bancos chineses</h4>
+          <p>Levar a jornada de tecnologia de um banco brasileiro para o mercado que mais avançou em escala digital.</p>
+        </div>
+      </div>
+      <div class="rec">
+        <img class="rec__img" src="img/palco-singapura.jpg" alt="Singapura, Huawei Intelligent Finance Summit 2022" loading="lazy">
+        <div class="rec__cap">
+          <div class="rec__loc">2022 · Singapura</div>
+          <h4>Huawei Intelligent Finance Summit</h4>
+          <p>Canais digitais e transformação digital, diante dos maiores bancos da Ásia.</p>
+        </div>
+      </div>
+      <div class="rec">
+        <img class="rec__img" src="img/palco-xangai.jpg" alt="Xangai, China" loading="lazy">
+        <div class="rec__cap">
+          <div class="rec__loc">2024 · Xangai</div>
+          <h4>De volta à China</h4>
+          <p>Segunda ida, agora para entender de perto o que a China já resolveu em varejo e em banco digital.</p>
+        </div>
+      </div>
+      <div class="rec">
+        <img class="rec__img" src="img/palco-vale.jpg" alt="São Francisco, Vale do Silício, 2025" loading="lazy">
+        <div class="rec__cap">
+          <div class="rec__loc">2019 e 2025 · Vale do Silício</div>
+          <h4>OpenAI · Stanford · Plug and Play</h4>
+          <p>Plug and Play com Chris Yeh em 2019. OpenAI, Stanford e Salesforce em 2025.</p>
+        </div>
+      </div>
+      <div class="rec">
+        <img class="rec__img" src="img/palco-lasvegas.jpg" alt="NICE CXone, Las Vegas 2025" loading="lazy">
+        <div class="rec__cap">
+          <div class="rec__loc">2025 · Las Vegas e Nova York</div>
+          <h4>NICE CXone · Google</h4>
+          <p>Atendimento com IA generativa e preditiva, e a corrida dos modelos vista de dentro.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="awards">
+      <div class="award"><b>Formação</b>Kellogg / Northwestern<br>Cambridge Judge Business School<br>Fundação Dom Cabral<br>Engenharia, FEI</div>
+      <div class="award"><b>Mesas e visitas</b>OpenAI · Stanford · AWS<br>Google · Microsoft · Salesforce<br>Huawei · NICE · Plug and Play</div>
+      <div class="award"><b>Publicação</b>Por Trás da TI — 3ª edição<br>Coautor com CIOs de vários países<br>Renda doada à caridade</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTATO ══════════ -->
+<section class="band" id="contato">
+  <div class="wrap reveal">
+    <p class="eyebrow">Contato</p>
+    <h2 class="sec">Vamos conversar.</h2>
+
+    <div class="talk">
+      <div>
+        <p class="lede" style="margin-bottom:26px">Ajudo as empresas a crescer:</p>
+        <ul class="talk__list">
+          <li>Fundadores de startups e empresas em crescimento que precisam escalar sem quebrar no caminho</li>
+          <li>Empresários e conselhos que querem uma leitura honesta sobre onde a tecnologia está travando o negócio</li>
+          <li>Convites para palco, mesa redonda e conselho</li>
+          <li>Quem quer trocar sobre o que a China e o Vale do Silício já resolveram e o Brasil ainda debate</li>
         </ul>
       </div>
-    </div>
-  </nav>
 
-  <div class="container">
-
-    <!-- HERO -->
-    <div class="hero" id="topo">
-      <div class="hero-inner">
-        <div>
-          <p class="hero-eyebrow">São Paulo, Brasil</p>
-          <h1 class="hero-name">Rodrigo<br>Galdino</h1>
-          <div class="hero-rule"></div>
-          <p class="hero-tagline">
-            Empresário · Investidor · ex-CTO<br>
-            25 anos em tecnologia e serviços financeiros<br>
-            Cambridge · Kellogg · FEI
-          </p>
+      <div>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/rodrigogaldino-20954516" target="_blank" rel="noopener"><b>LinkedIn</b>Rodrigo Galdino</a>
+          <a href="https://www.instagram.com/rodrigogaldino" target="_blank" rel="noopener"><b>Instagram</b>@rodrigogaldino</a>
+          <a href="https://www.tiktok.com/@rodrigoogaldino" target="_blank" rel="noopener"><b>TikTok</b>@rodrigoogaldino</a>
+          <a href="mailto:rodrigo@opsiabrasil.com"><b>E-mail</b>rodrigo@opsiabrasil.com</a>
         </div>
-        <div class="hero-photo" aria-hidden="true">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
-          </svg>
-          <span>Foto<br>profissional</span>
-        </div>
+        <a class="btn btn--solid" href="mailto:rodrigo@opsiabrasil.com" style="margin-top:32px;justify-self:start">Enviar e-mail</a>
       </div>
     </div>
-
-    <!-- METRICS -->
-    <div class="metrics">
-      <div class="metric">
-        <div class="metric-value">25</div>
-        <div class="metric-label">Anos de experiência</div>
-      </div>
-      <div class="metric">
-        <div class="metric-value">R$10bi+</div>
-        <div class="metric-label">Volume gerenciado</div>
-      </div>
-      <div class="metric">
-        <div class="metric-value">3</div>
-        <div class="metric-label">Ventures ativos</div>
-      </div>
-    </div>
-
-    <!-- SOBRE -->
-    <section id="sobre">
-      <p class="section-label">Sobre</p>
-      <p class="bio-text">
-        De desenvolvedor de software a integrante do núcleo estratégico
-        que transformou uma empresa de 100 anos em uma das maiores
-        plataformas digitais financeiras da América Latina.
-        <em>Hoje uso tudo que aprendi do outro lado da mesa —
-        construindo e investindo em ventures onde tecnologia é
-        vantagem competitiva real.</em>
-      </p>
-    </section>
-
-    <!-- TRAJETÓRIA -->
-    <section id="trajetoria">
-      <p class="section-label">Trajetória</p>
-      <p class="traj-intro">
-        Comecei na linha de código e aprendi que as decisões mais importantes
-        nunca são técnicas — são estratégicas. Fui um dos integrantes do núcleo
-        duro que construiu a estratégia de transformação digital do Itaú:
-        <strong>como se transforma uma empresa de 100 anos em uma plataforma digital</strong>
-        sem perder escala, regulação e cultura. Essa visão moldou tudo que
-        faço hoje como empreendedor e investidor.
-      </p>
-      <ul class="traj-list">
-        <li class="traj-item">
-          <span class="traj-period">2018 — 2026</span>
-          <div>
-            <div class="traj-company">Banco Itaú</div>
-            <div class="traj-role">CTO — Membro do núcleo estratégico de transformação digital (Control Tower)</div>
-            <div class="traj-note">Responsável pelas Comunidades de Atendimento, Agências, Modern Workplace e Franquias. Co-arquiteto da estratégia que transformou uma empresa centenária em plataforma digital. Speaker em FEBRABAN TECH 2024, Conarec 2024, ServiceNow Summit, Huawei Intelligent Finance Summit Ásia 2022 e Cúpula Internacional de Bancos Shanghai 2023. Líder da Operação de Guerra Covid 19 — vencedora do Prêmio Walther Moreira Salles 2021.</div>
-            <div class="awards-box">
-              <div class="awards-box-label">Premiações</div>
-              <div class="award-line">Vencedor Prêmio Walther Moreira Salles 2021 — Categoria Risco</div>
-              <div class="award-line">Finalista Prêmio Walther Moreira Salles 2022 — Eficiência</div>
-              <div class="award-line">Vencedor Prêmio Kaizen Itaú Unibanco 2020 — Eficiência</div>
-              <div class="award-line">Vencedor Prêmio Kaizen Itaú Unibanco 2019 — Rentabilidade</div>
-            </div>
-          </div>
-        </li>
-        <li class="traj-item">
-          <span class="traj-period">Nov 2017 — Mar 2018</span>
-          <div>
-            <div class="traj-company">Athié Wohnrath</div>
-            <div class="traj-role">CIO — Diretor de Tecnologia</div>
-            <div class="traj-note">Transformação digital e migração 100% cloud — AWS + Azure</div>
-          </div>
-        </li>
-        <li class="traj-item">
-          <span class="traj-period">2015 — 2017</span>
-          <div>
-            <div class="traj-company">Digio</div>
-            <div class="traj-role">CIO — Fintech do grupo Elopar (Cielo, Elo, Alelo)</div>
-            <div class="traj-note">Scaling de clientes e plataformas digitais mobile-first</div>
-          </div>
-        </li>
-        <li class="traj-item">
-          <span class="traj-period">2013 — 2015</span>
-          <div>
-            <div class="traj-company">Alelo Brasil</div>
-            <div class="traj-role">Gerente de Tecnologia</div>
-            <div class="traj-note">Estruturação tech para dobrar faturamento em 3 anos</div>
-          </div>
-        </li>
-        <li class="traj-item">
-          <span class="traj-period">2008 — 2013</span>
-          <div>
-            <div class="traj-company">Bradesco Cartões · IBI</div>
-            <div class="traj-role">Gerente de Tecnologia</div>
-            <div class="traj-note">Incorporação Banco IBI, Amex e Bradescard México</div>
-          </div>
-        </li>
-      </ul>
-
-      <!-- FORMAÇÃO -->
-      <p class="section-label" style="margin-top: 48px;">Formação</p>
-      <div class="edu-grid">
-        <div class="edu-item">
-          <div class="edu-inst">Kellogg</div>
-          <div class="edu-course">Executive Education<br>Northwestern University · 2017</div>
-        </div>
-        <div class="edu-item">
-          <div class="edu-inst">Cambridge</div>
-          <div class="edu-course">Post MBA — Innovation & Entrepreneurship<br>Judge Business School · 2012–2013</div>
-        </div>
-        <div class="edu-item">
-          <div class="edu-inst">Fundação Dom Cabral</div>
-          <div class="edu-course">MBA em Negócios · 2011–2012</div>
-        </div>
-        <div class="edu-item">
-          <div class="edu-inst">FEI</div>
-          <div class="edu-course">Engenharia de Produção · 2005–2010</div>
-        </div>
-      </div>
-
-      <!-- LIVRO -->
-      <p class="section-label" style="margin-top: 48px;">Publicação</p>
-      <div class="book-card">
-        <div class="book-cover">
-          <span>Por Trás<br>da TI</span>
-        </div>
-        <div class="book-info">
-          <div class="book-title">Por Trás da TI — 3ª Edição</div>
-          <p class="book-desc">
-            Co-autor com CIOs e CTOs de várias partes do mundo. Histórias de
-            liderança e transformação tecnológica para inspirar pessoas a impactar
-            a sociedade. Toda a renda é doada para instituições de caridade.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRESENÇA PÚBLICA -->
-    <section id="presenca">
-      <p class="section-label">Presença pública</p>
-      <div class="events-grid">
-        <div class="event-card">
-          <div class="event-tag">2023 · Shanghai, China</div>
-          <div class="event-name">Cúpula Internacional de Bancos</div>
-          <p class="event-desc">Palestra sobre IA Generativa, transformação digital e cultura entre os maiores bancos do mundo. Representando o Itaú como referência mundial.</p>
-        </div>
-        <div class="event-card">
-          <div class="event-tag">2022 · Ásia</div>
-          <div class="event-name">Huawei Intelligent Finance Summit</div>
-          <p class="event-desc">Evento que reúne os maiores bancos do mundo na Ásia. Palestra sobre jornada de tecnologia, cultura e impacto social.</p>
-        </div>
-        <div class="event-card">
-          <div class="event-tag">2026 · Austin, Texas</div>
-          <div class="event-name">SXSW</div>
-          <p class="event-desc">South by Southwest — maior evento de inovação do mundo. Grupo de empresários brasileiros líderes.</p>
-        </div>
-        <div class="event-card">
-          <div class="event-tag">2024 · São Paulo</div>
-          <div class="event-name">FEBRABAN TECH</div>
-          <p class="event-desc">Palestra sobre IA Generativa, M365 Copilot e transformação digital no setor financeiro.</p>
-        </div>
-        <div class="event-card">
-          <div class="event-tag">2024 · São Paulo</div>
-          <div class="event-name">Conarec & ServiceNow Summit</div>
-          <p class="event-desc">Apresentação da jornada de CX e atendimento do Itaú em dois dos maiores eventos de tecnologia do Brasil.</p>
-        </div>
-        <div class="event-card">
-          <div class="event-tag">Silicon Valley · EUA</div>
-          <div class="event-name">Stanford · Kellogg · Plug and Play</div>
-          <p class="event-desc">Imersões em inovação e estratégia. Encontro com Reid Hoffman (cofundador do LinkedIn) e Chris Yeh no Plug and Play, onde nasceram Google e PayPal.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- VENTURES -->
-    <section id="ventures">
-      <p class="section-label">Ventures</p>
-      <div class="ventures-grid">
-        <div class="venture-card">
-          <div class="venture-tag">Holding · 2024</div>
-          <div class="venture-name">RGS Holding</div>
-          <p class="venture-desc">Participações em negócios, equity e ventures tecnológicos com visão de longo prazo.</p>
-        </div>
-        <div class="venture-card">
-          <div class="venture-tag">SaaS · 2026</div>
-          <div class="venture-name">Leadble</div>
-          <p class="venture-desc">Plataforma de inteligência baseada no método Marketing de Interesse, co-fundada com João Kepler. Separa os papéis de leads, parceiros, afiliados e operadores com precisão.</p>
-        </div>
-        <div class="venture-card">
-          <div class="venture-tag">Conselho · 2026</div>
-          <div class="venture-name">SME | The New Economy</div>
-          <p class="venture-desc">JK Board Member — estratégia e tecnologia para o maior ecossistema de negócios da nova economia da América Latina.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ADVISORY -->
-    <section id="advisory">
-      <p class="section-label">Advisory</p>
-      <p class="advisory-lead">
-        Trabalho com CEOs e founders que precisam de um advisor que entende
-        <em>os dois lados da mesa</em> — o técnico e o estratégico.
-        Não como executor, mas como parceiro de decisão.
-      </p>
-      <div class="advisory-grid">
-        <div class="advisory-item">
-          <div class="advisory-title">Estratégia de tecnologia</div>
-          <p class="advisory-desc">Stack, arquitetura e decisões de time alinhadas ao momento do negócio.</p>
-        </div>
-        <div class="advisory-item">
-          <div class="advisory-title">Avaliação de times técnicos</div>
-          <p class="advisory-desc">Capacidade de entrega, estimativas realistas e maturidade de produto.</p>
-        </div>
-        <div class="advisory-item">
-          <div class="advisory-title">Fintech & pagamentos</div>
-          <p class="advisory-desc">25 anos em regulação, infraestrutura e modelos de negócio em serviços financeiros.</p>
-        </div>
-        <div class="advisory-item">
-          <div class="advisory-title">Transformação digital</div>
-          <p class="advisory-desc">Da estratégia à execução — cloud, agilidade e cultura de produto.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato" class="contact-section">
-      <p class="section-label">Contato</p>
-      <h2 class="contact-headline">Vamos conversar<br>sobre o seu negócio.</h2>
-      <p class="contact-sub">
-        Disponível para advisory, board e oportunidades de investimento.<br>
-        São Paulo, Brasil.
-      </p>
-      <div class="contact-actions">
-        <a href="mailto:contato@rodrigogaldino.com.br" class="btn-primary">Enviar mensagem</a>
-        <a href="https://linkedin.com/in/rodrigo-galdino-20954516" target="_blank" rel="noopener" class="btn-secondary">LinkedIn</a>
-      </div>
-    </section>
-
   </div>
+</section>
 
-  <footer>
-    <div class="container" style="display:flex; justify-content:space-between; width:100%;">
-      <span class="footer-text">© 2026 Rodrigo Galdino</span>
-      <span class="footer-text">rodrigogaldino.com.br</span>
-    </div>
-  </footer>
+<footer class="foot">
+  <span>© 2026 Rodrigo Galdino · São Paulo, Brasil</span>
+  <div class="foot__links">
+    <a href="mailto:rodrigo@opsiabrasil.com">rodrigo@opsiabrasil.com</a>
+    <a href="https://linkedin.com/in/rodrigogaldino-20954516" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://instagram.com/rodrigogaldino" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://tiktok.com/@rodrigoogaldino" target="_blank" rel="noopener">TikTok</a>
+    <a href="#topo">Topo</a>
+  </div>
+</footer>
+
+<script>
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function(){
+  nav.classList.toggle('is-stuck', window.scrollY > 40);
+}, {passive:true});
+
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('is-in'); }); return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
 
 </body>
 </html>
